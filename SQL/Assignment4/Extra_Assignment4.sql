@@ -115,7 +115,9 @@ VALUES 	(1,5,1,'2020-05-01','design',1),
 		(19,8,10,null,'sumary test case',1),
 		(20,7,10,null,'write code done',1);
         
--- b) Viêt thủ tục để Remove toàn bộ thông tin Project đã hoàn thành lâu hơn 3 tháng tính từ thời điểm hiện tại. (Ví dụ bh là tháng 03/12 thì những project nào done trước 03/09 ta sẽ remove đi). Đồng thời thống kê số lượng bản ghi bị xóa ở mỗi bảng liên quan.
+-- b) Viêt thủ tục để Remove toàn bộ thông tin Project đã hoàn thành lâu hơn 3 tháng tính từ thời điểm hiện tại.
+-- (Ví dụ bh là tháng 03/12 thì những project nào done trước 03/09 ta sẽ remove đi). 
+-- Đồng thời thống kê số lượng bản ghi bị xóa ở mỗi bảng liên quan.
 DROP PROCEDURE IF EXISTS DEL_Project_sugi_3m;
 DELIMITER $$
 CREATE PROCEDURE DEL_Project_sugi_3m (OUT out_del INT)
@@ -141,7 +143,7 @@ CREATE PROCEDURE Module_dangthuchien (IN in_projectID INT(11))
 	BEGIN
 		SELECT *
         FROM Project_Modules
-        WHERE ProjectModulesCompletedOn IS NOT NULL
+        WHERE ProjectModulesCompletedOn IS NULL
 			AND ProjectID = in_projectID;
     END$$
 DELIMITER ;

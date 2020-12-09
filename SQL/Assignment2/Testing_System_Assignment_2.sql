@@ -95,7 +95,7 @@ VALUES 		(N'SQL là gì', 1, 1,1),
             (N'Sales là gì', 4, 2,2),
             (N'NodeJS là gì', 3, 1,4),
 			(N'React Native là gì', 1, 2,1);
-  
+
 CREATE TABLE Answer   (
 		AnswerID 		TINYINT AUTO_INCREMENT PRIMARY KEY,
 		Content 		NVARCHAR(500) NOT NULL,

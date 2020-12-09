@@ -147,11 +147,15 @@ DROP PROCEDURE IF EXISTS DeleteExamCreate3Year;
 DELIMITER $$
 CREATE PROCEDURE DeleteExamCreate3Year()
 BEGIN
-CREATE OR REPLACE VIEW Exam3Year AS
-    (	SELECT *
+	CREATE OR REPLACE VIEW Exam3Year AS
+		SELECT *
 		FROM exam
-        WHERE (YEAR(NOW()) - YEAR(CreateDate)) > 3
-    );
+		WHERE (YEAR(NOW()) - YEAR(CreateDate)) > 3;
+    
+    SELECT count(1) AS 'Count column remove in examquestion'
+    FROM examquestion 
+    WHERE ExamID = (SELECT * FROM Exam3Year);
+    
 	DELETE 	
     FROM 	Exam 
     WHERE	ExamID = (SELECT * FROM Exam3Year);
@@ -182,12 +186,11 @@ DELIMITER ;
 -- nay
 DROP PROCEDURE IF EXISTS Month_CreateQ;
 DELIMITER $$
-CREATE PROCEDURE Month_CreateQ(IN month_input TinyINT)
+CREATE PROCEDURE Month_CreateQ()
 BEGIN
-	SELECT *
+	SELECT MONTH(createDate), count(*) AS countQuestion
     FROM Question
-    WHERE YEAR(createDate)= YEAR(NOW())
-			AND MONTH(createDate)= month_input
+    WHERE YEAR(createDate)= YEAR(NOW())		
     GROUP BY MONTH(createDate);
 END$$
 DELIMITER ;

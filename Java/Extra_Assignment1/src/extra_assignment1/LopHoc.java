@@ -10,5 +10,11 @@ package extra_assignment1;
  * @author May tinh Duy Toi
  */
 public class LopHoc {
-    
+    int         id ;
+    String      tenLop;
+    String      monHoc;
+    int         thoiGianHoc;
+    int         soLuong;
+    GiaoVien[]  giaoViens;
+    Student[]   students;    
 }

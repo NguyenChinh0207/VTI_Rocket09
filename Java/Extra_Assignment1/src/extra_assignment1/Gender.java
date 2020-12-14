@@ -9,6 +9,6 @@ package extra_assignment1;
  *
  * @author May tinh Duy Toi
  */
-public class Gender {
-    
+public enum Gender {
+    NAM,NU,UNKNOW
 }

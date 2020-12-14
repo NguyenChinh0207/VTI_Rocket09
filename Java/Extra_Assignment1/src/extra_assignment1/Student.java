@@ -13,8 +13,19 @@ import java.time.LocalDate;
  */
 public class Student {
     int id;
-    String ten;
-    LocalDate tuoi;
+    String hoTen;
+    LocalDate ngaySinh;
     String queQuan;
+    Gender gioitinh;
     HeSinhVien heSinhVien;
+    int namNhapHoc;
+    int[] diems;
+    LopHoc[] lopHocs;
+    
+    void goToSchool(){
+        System.out.println("I am going to school");
+    }
+    void dangKiLopHoc(){
+        System.out.println("Dang ki lop hoc");
+    }
 }

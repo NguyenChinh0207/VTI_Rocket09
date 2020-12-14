@@ -10,9 +10,18 @@ package extra_assignment1;
  * @author May tinh Duy Toi
  */
 public class HeSinhVien {
-    BacHoc bacHoc;
-    
+    BACHOC bacHoc;
+    THOIGIANDT thoiGianDT;
+    SOTC soTC;
 }
-enum BacHoc{
-DAI_HOC, CAO_DANG
+enum BACHOC{
+    DAIHOC, CAODANG
+}
+enum THOIGIANDT{
+    DAIHOC(4), CAODANG(3);
+    THOIGIANDT(int value){}
+}
+enum SOTC{
+    DAIHOC(210), CAODANG(150);
+    SOTC(int value){}
 }

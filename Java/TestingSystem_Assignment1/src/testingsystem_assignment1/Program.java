@@ -5,6 +5,7 @@
  */
 package testingsystem_assignment1;
 
+import java.security.interfaces.ECKey;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.Date;
@@ -257,9 +258,11 @@ public class Program {
         System.out.println("Position Name: "+acc1.position.positionName);
         System.out.println("Create date: "+acc1.createDate);
         System.out.println("Groups of Account1: ");
-        for(int i=0;i<acc1.groups.length;i++){
-            System.out.println(acc1.groups[i].groupName);
+        
+        for(Group i : acc1.groups){
+            System.out.println(i.groupName);
         }
+        
         System.out.println("\n");
         
         //Table 4: Group
@@ -268,10 +271,11 @@ public class Program {
         System.out.println("Creator: "+group1.creator);
         System.out.println("Create Date: "+group1.createDate);
         System.out.println("Accounts of group1: ");
-        for(int i=0;i<group1.accounts.length;i++){
-            System.out.println(group1.accounts[i].fullName);
+        for(Account i : group1.accounts){
+            System.out.println(i.fullName);
         }
         System.out.println("\n");
+        
         //Table 5: TypeQuestion
         System.out.println("Type ID 1: "+typeQ1.id);
         System.out.println("TypeQuestion Name: "+typeQ1.typeName);
@@ -290,9 +294,9 @@ public class Program {
         System.out.println("Account create : "+q3.account.fullName);
         System.out.println("Create date : "+q3.createDate);
         System.out.println("Exams of Question : ");
-        for(int i=0;i<q3.exams.length;i++){
-            System.out.println(q3.exams[i].title);
-        }       
+        for(Exam i : q3.exams){
+            System.out.println(i.title);
+        }
         System.out.println("\n");
         
         //Table 8: Answer
@@ -308,9 +312,8 @@ public class Program {
         System.out.println("duration : "+e1.duration);
         System.out.println("creatDate : "+e1.creatDate);
         System.out.println("Questions of exam : ");
-        for(int i=0;i<e1.questions.length;i++){
-            System.out.println(e1.questions[i].content);
+        for(Question i : e1.questions){
+            System.out.println(i.content);
         }
-        
     }
 }

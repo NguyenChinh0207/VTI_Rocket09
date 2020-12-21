@@ -70,12 +70,13 @@ public class Exercise3 {
         }
 
         System.out.printf("%d! = %d\\n",n, gt);
-
+        
        
     }
     public static void main(String[] args) {
         Question1();
         Question2();
+        
     }
     
 }

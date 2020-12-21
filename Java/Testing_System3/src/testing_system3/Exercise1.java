@@ -23,8 +23,8 @@ public class Exercise1 {
         
         Account account2=new Account();
         account2.luong=(float) 10970.055;
-        
-        int lamTron1 = (int)account1.luong  + 1;
+        System.out.println("Luong cua account1: " + account1.luong + "\nLuong cua acc2: " + account2.luong); 
+        int lamTron1 = (int)account1.luong ;
         int lamTron2 = (int)account2.luong ;
         
         System.out.printf("Luong cua hai acc sau khi làm tròn là: Acc1: %d, Acc2:%d",lamTron1,lamTron2);

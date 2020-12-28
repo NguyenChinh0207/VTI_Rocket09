@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Assignment2/Assignment2.iml" filepath="$PROJECT_DIR$/Assignment2/Assignment2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment3/Assignment3.iml" filepath="$PROJECT_DIR$/Assignment3/Assignment3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Extra2_Assignment5/Extra2_Assignment5.iml" filepath="$PROJECT_DIR$/Extra2_Assignment5/Extra2_Assignment5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Extra_Assignment1/Extra_Assignment1.iml" filepath="$PROJECT_DIR$/Extra_Assignment1/Extra_Assignment1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Extra_Assignment4/Extra_Assignment4.iml" filepath="$PROJECT_DIR$/Extra_Assignment4/Extra_Assignment4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java.iml" filepath="$PROJECT_DIR$/.idea/Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Testing_System1/Testing_System1.iml" filepath="$PROJECT_DIR$/Testing_System1/Testing_System1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Testing_System2/Testing_System2.iml" filepath="$PROJECT_DIR$/Testing_System2/Testing_System2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Testing_System3/Testing_System3.iml" filepath="$PROJECT_DIR$/Testing_System3/Testing_System3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Testing_System4/Testing_System4.iml" filepath="$PROJECT_DIR$/Testing_System4/Testing_System4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Testing_System5/Testing_System5.iml" filepath="$PROJECT_DIR$/Testing_System5/Testing_System5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Testing_System6/Testing_System6.iml" filepath="$PROJECT_DIR$/Testing_System6/Testing_System6.iml" />
+    </modules>
+  </component>
+</project>

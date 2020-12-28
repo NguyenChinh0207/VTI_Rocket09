@@ -24,8 +24,9 @@ public class Truck extends Car{
     public void setWeight(int weight) {
         this.weight = weight;
     }
-    
-    public double getSalePrice(){
+
+    @Override
+    public double getSalePrice() {
         if(weight>2000){
             regularPrice=regularPrice*0.1;
         }
@@ -33,6 +34,9 @@ public class Truck extends Car{
             regularPrice=regularPrice*0.2;
         }
         return 0;
-    
+        
     }
+    
+    
+    
 }

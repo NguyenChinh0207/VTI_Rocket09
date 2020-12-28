@@ -94,4 +94,10 @@ public class Person {
         System.out.println("Gioi tinh: "+gioiTinh);
         System.out.println("Ngay sinh: "+ngaySinh);
     }
+
+    @Override
+    public String toString() {
+        return "Person{" + "name=" + name + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + ngaySinh + ", diaChi=" + diaChi + ", scanner=" + scanner + '}';
+    }
+    
 }

@@ -60,6 +60,11 @@ public class Student extends Person{
 	System.out.println("Điểm trung bình: " + diemTB);
 	System.out.println("Email: " + email);
     }
+
+    @Override
+    public String toString() {
+        return "Student{" + "maSV=" + maSV + ", diemTB=" + diemTB + ", email=" + email + '}';
+    }
     
     @Override
     public void inputInfo() {

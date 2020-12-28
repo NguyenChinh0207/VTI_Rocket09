@@ -24,9 +24,18 @@ public class Sedan extends Car{
         super(speed, regularPrice, color);
         this.length = length;
     }
-    
-    public double getSalePrice(){
+
+    @Override
+    public double getSalePrice() {
+        if(length>20){
+            regularPrice=regularPrice*0.05;
+        }
+        else{
+            regularPrice=regularPrice*0.1;
+        }
         return 0;
-    
+        
     }
+    
+   
 }

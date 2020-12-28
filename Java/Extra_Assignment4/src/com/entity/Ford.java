@@ -35,10 +35,12 @@ public class Ford extends Car{
         this.manufacturerDiscount = manufacturerDiscount;
     }
 
-    
-    
-    public double getSalePrice(){
-        return 0;
-    
+    @Override
+    public double getSalePrice() {
+        return super.getSalePrice()-manufacturerDiscount; //To change body of generated methods, choose Tools | Templates.
     }
+
+    
+    
+    
 }

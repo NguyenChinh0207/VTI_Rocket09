@@ -20,7 +20,7 @@ public class Ex5_Inheritance {
         System.out.println("Nhap chuc nang so:\n"+"1.Them moi can bo\n2.Tim kiem theo ho ten\n"+"3.Hien thi thong tin ds can bo\n"+"4.Nhap ten can bo va xoa can bo do."+"\n5.Thoat chuong trinh");
         while(true){
             System.out.print("Moi ban chon chuc nang: ");
-        int choose=scanner.nextInt();
+            int choose=scanner.nextInt();
         switch(choose){
             case 1:
                qlcb.addCanBo();

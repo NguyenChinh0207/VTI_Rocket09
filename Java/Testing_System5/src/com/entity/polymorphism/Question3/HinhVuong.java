@@ -28,6 +28,7 @@ public class HinhVuong extends HinhChuNhat{
         return super.tinhChuVi(a, b);
     }
     public float tinhChuVi(float a) {
+
         return this.tinhChuVi(a, a);
     }
 }

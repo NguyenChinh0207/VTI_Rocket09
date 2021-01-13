@@ -56,7 +56,13 @@ public class FileManager {
             }
         }
     }
-    public void copyFile(String sourceFile, String distinationPath, String newName){
+    public void copyFile(String sourceFile, String distinationPath, String newName) throws Exception {
+        File file = new File(sourceFile);
+        if (!file.exists()) {
+            throw new Exception("Error! Source File Not Exist");
+        } else if (file.exists()) {
+            throw new Exception("Error! newPath has File same name");
+        }
 
     }
     public void copyFile(String sourceFile, String newPath){

@@ -99,11 +99,20 @@ DELIMITER
 -- positionID: sẽ có default là developer
 -- departmentID: sẽ được cho vào 1 phòng chờ
 -- Sau đó in ra kết quả tạo thành công
-DROP PROCEDURE IF EXISTS sp_importInf_Of_Account;
+
+INSERT INTO Department VALUE(6,'Phòng Chờ');
+DROP PROCEDURE IF EXISTS Question7;
 DELIMITER $$
-CREATE PROCEDURE sp_importInf_Of_Account(IN in_fullName NVARCHAR(50),IN	in_email VARCHAR(50))
+CREATE PROCEDURE Question7(INin_email VARCHAR(50), IN in_fullName NVARCHAR(50))
 BEGIN
-	
+	DECLARE UserName VARCHAR(50) DEFAULT SUBSTRING_INDEX(in_email,'@',1);
+    DECLARE PositionID TINYINT DEFAULT 1;-- Dev
+    DECLARE DepartmentID TINYINT DEFAULT 6;
+	INSERT INTO `Account` 	(Email		,Username, FullName		, DepartmentID,	PositionID)
+    VALUE					(in_email	,UserName, in_fullName	, DepartmentID, PositionID);
+    SELECT 	*
+    FROM 	`Account`A
+    WHERE	A.Username = UserName AND A.fullname =in_fullName;
 END$$
 DELIMITER ;
 
@@ -200,10 +209,28 @@ DELIMITER ;
 -- (Nếu tháng nào không có thì sẽ in ra là "không có câu hỏi nào trong
 -- tháng")
 
-DROP PROCEDURE IF EXISTS CountQ_In_Month_In_6Month;
+DROP PROCEDURE IF EXISTS CountQuesiN6Month;
 DELIMITER $$
-CREATE PROCEDURE CountQ_In_Month_In_6Month()
+CREATE PROCEDURE CountQuesiN6Month()
 BEGIN
-	
+		SELECT iN6Month.MONTH, COUNT(QuestionID) AS COUNT
+		FROM
+		(
+			SELECT MONTH(CURRENT_DATE - INTERVAL 5 MONTH) AS MONTH
+			UNION
+			SELECT MONTH(CURRENT_DATE - INTERVAL 4 MONTH) AS MONTH
+			UNION
+			SELECT MONTH(CURRENT_DATE - INTERVAL 3 MONTH) AS MONTH
+			UNION
+			SELECT MONTH(CURRENT_DATE - INTERVAL 2 MONTH) AS MONTH
+			UNION
+			SELECT MONTH(CURRENT_DATE - INTERVAL 1 MONTH) AS MONTH
+			UNION
+			SELECT MONTH(CURRENT_DATE - INTERVAL 0 MONTH) AS MONTH
+        ) AS iN6Month
+		LEFT JOIN Question ON iN6Month.MONTH = MONTH(CreateDate)
+		GROUP BY iN6Month.MONTH
+		ORDER BY Previous6Month.MONTH ASC;
 END$$
 DELIMITER ;
+

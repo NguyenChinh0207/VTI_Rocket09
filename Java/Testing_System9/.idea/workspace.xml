@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a65f610d-999e-4760-a918-686ac6fc2cb1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Testing_System10/src/main/java/backend/DepartmentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Testing_System10/src/main/java/backend/Ex3_Call_Procerduce.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Testing_System10/src/main/java/backend/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Testing_System10/src/main/java/entity/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Testing_System10/src/main/java/frontend/Exercise1_Basic/Exercise1_Program.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Testing_System10/src/main/java/frontend/Exercise1_Basic/Exercise2_Program.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Testing_System10/src/main/java/frontend/Exercise1_Basic/Exercise3_Program.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Testing_System10/src/main/java/utils/JdbcUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Testing_System10/src/main/java/utils/ScannerUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing_System9.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SQL/Assignment4/Testing_System_Assignment4.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../SQL/Assignment4/Testing_System_Assignment4.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SQL/ExamFinal/NguyenThiChinh_Rocket09.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../SQL/ExamFinal/NguyenThiChinh_Rocket09.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestDatabaseJDBC/src/Programe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestDatabaseJDBC/src/Programe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestMaven/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestMaven/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestMaven/src/main/java/Programe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestMaven/src/main/java/Programe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestMaven/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestMaven/src/main/resources/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestMaven/target/classes/Programe.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestMaven/target/classes/Programe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Testing_System10/src/main/java/backend/Exercise1_Basic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Testing_System10/src/main/java/backend/Exercise1_Basic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Testing_System10/src/main/java/frontend/Exercise1_Basic/Question1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Testing_System10/src/main/java/frontend/Exercise1_Basic/Question2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Testing_System10/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Testing_System10/src/main/resources/database.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1mvsEnSaC8PWHA34Qs4n71ake9m" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a65f610d-999e-4760-a918-686ac6fc2cb1" name="Default Changelist" comment="" />
+      <created>1610385289877</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610385289877</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

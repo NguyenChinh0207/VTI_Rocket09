@@ -15,7 +15,6 @@ public class JdbcUtils {
     public JdbcUtils() throws IOException {
         properties = new Properties();
         properties.load(new FileInputStream("src/main/resources/database.properties"));
-        properties.load(new FileInputStream("src/main/resource/message.properties"));
 
     }
     public void isConnectForTesting() throws SQLException, ClassNotFoundException {

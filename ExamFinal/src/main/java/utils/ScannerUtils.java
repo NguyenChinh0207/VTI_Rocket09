@@ -35,28 +35,56 @@ public class ScannerUtils {
         }
     }
 
-    public static LocalDate inputDate(String errString) {
+    public static String inputPassWord(String errString) {
         while (true) {
-            try {
-                String dateString = scanner.nextLine();
-                LocalDate localDate= LocalDate.parse(dateString);
-                return localDate;
-
-            } catch (Exception e) {
+            String password = ScannerUtils.inputString(errString);
+            if (password.length() < 6 || password.length() > 12) {
                 printErrString(errString);
+                continue;
+            }
+            int check = 0;
+            for (int i = 0; i < password.length(); i++) {
+                char character = password.charAt(i);
+                if (Character.isUpperCase(character) == true) {
+                    check = 1;
+                    break;
+                }
+            }
+            if(check==1){
+                return password;
+            }
+            else
+            {
+                printErrString(errString);
+                System.out.print("Please input password: ");
             }
         }
+
     }
+
     public static String inputEmail(String errString) {
         while (true) {
             String email = ScannerUtils.inputString(errString);
-            if (email == null || !email.contains("@gmail.com")) {
+            if (email == null || !email.contains("@vti.com.vn")) {
                 printErrString(errString);
-                System.out.print("Mời bạn nhập lại email: ");
+                System.out.print("Please input email: ");
             } else {
                 return email;
             }
         }
     }
+
+    public static int inputID(String errString) {
+        while (true) {
+            int id = ScannerUtils.inputInt(errString);
+            if (id <= 0) {
+                printErrString(errString);
+                System.out.print("Please input id: ");
+            } else {
+                return id;
+            }
+        }
+    }
+
 
 }

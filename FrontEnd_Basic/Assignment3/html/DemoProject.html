@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment3</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div>
+            <div>
+                <h3>Question1
+                </h3>
+                <label for="">Number 1: </label>
+                <input id="n1" type="text">
+                <br>
+                <label for="">Number 2: </label>
+                <input id="n2" type="text">
+                <br>
+                <button onclick="Add()">Cộng</button>
+                <button onclick="Minus()">Trừ</button>
+                <button onclick="Multi()">Nhân</button>
+                <button onclick="Div()">Chia</button>
+                <button onclick="Mod()">%</button>
+                <br>
+                <label for="">Kết quả: </label>
+                <input id="result" type="text">
+
+            </div>
+            <div>
+                <h3>Question2</h3>
+                <table class="hinhChuNhat">
+                    <tr>
+                        <td>Nhập độ dài chiều dài thứ nhất</td>
+                        <td><input id="num1" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Nhập độ dài chiều dài thứ hai</td>
+                        <td> <input id="num2" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button onclick="tinhToan()">Tính toán</button></td>
+                    </tr>
+                    <tr>
+                        <td>Chu vi là</td>
+                        <td><input id="chuVi" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Dien tich la</td>
+                        <td><input id="dienTich" type="text"></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h3>Question3-Giai phuong trinh bac 2</h3>
+                <table class="giaiPT">
+                    <tr>
+                        <td>Nhâp a</td>
+                        <td><input id="a" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Nhập b</td>
+                        <td> <input id="b" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Nhập c</td>
+                        <td> <input id="c" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button onclick="giaiPT()">Giải Phương
+                                Trình</button></td>
+                    </tr>
+                    <tr>
+                        <td>Kết quả</td>
+                        <td><label id="ketqua" for="">ket qua</label></td>
+                    </tr>
+
+                </table>
+            </div>
+            <div>
+                <h3>Question4</h3>
+                <table class="caculate">
+                    <tr>
+                        <td>Number 1</td>
+                        <td><input id="number1" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Number 2</td>
+                        <td><input id="number2" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Option</td>
+                        <td>
+                            <select name="" id="">
+                                <option id="tong" value="" selected>Add</option>
+                                <option id="hieu" value="">Sub</option>
+                                <option id="tich" value="">Multi</option>
+                                <option id="chia" value="">Divide</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kết quả</td>
+                        <td><input id="q4-Result" type="text" readonly disabled></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button onclick="caculate()">Caculate</button></td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <div>
+                <h3>Question 5</h3>
+                <div>
+                    <label for="">Nhập vào số nguyên dương:</label>
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script src="../js/script.js"></script>
+</html>

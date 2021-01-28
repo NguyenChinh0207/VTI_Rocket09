@@ -1,0 +1,10 @@
+table.hinhChuNhat, .hinhChuNhat td{
+    text-align: center;
+    border: 1px solid black;
+    margin: 4px;
+}
+table.giaiPT, .giaiPT td{
+    text-align: center;
+    border: 1px solid black;
+    margin: 4px;
+}

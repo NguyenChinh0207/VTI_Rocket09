@@ -493,28 +493,3 @@ function openViewAnswer(idEmployee) {
     );
 }
 
-// ///Login
-// function login() {
-
-//     $.get(
-//         "https://5fa3f69bf10026001618e3a5.mockapi.io/api/v1/employees",
-//         function(data, status) {
-//             data.forEach(function(item) {
-//                 if (
-//                     $("#username").val() == item.name &&
-//                     $("#password").val() == item.password
-//                 ) {
-//                     alert("Login success");
-//                     // $('body').load("program.html");
-//                 } else {
-//                     alert("username or password is not correct");
-//                 }
-//             });
-//             if (status == "error") {
-//                 // TODO
-//                 alert("Error when loading data");
-//                 return;
-//             }
-//         }
-//     );
-// }

@@ -26,7 +26,7 @@ public class HibernateUtils {
 
 	private HibernateUtils() {
 		configure();
-	}
+	}//để private
 
 
 	private void configure() {

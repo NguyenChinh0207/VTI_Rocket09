@@ -4,7 +4,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 import org.hibernate.service.ServiceRegistry;
+
+import java.util.List;
 
 public class TestHibernate {
 	public static void main(String[] args) {
@@ -16,9 +19,12 @@ public class TestHibernate {
 			session.beginTransaction();
 
 			TestingCategory category = new TestingCategory();
-			category.setName("Hibernate3");
-
-			session.save(category);
+			Group group1=new Group();
+			Query<Group> query = session.createQuery("FROM Group");
+			List<Group> groupList=query.list();
+			for (Group group: groupList) {
+				System.out.println(group);
+			}
 
 			System.out.println("Create success!");
 
@@ -37,8 +43,8 @@ public class TestHibernate {
 		configuration.configure("hibernate.cfg.xml");
 
 		// add entity
-		configuration.addAnnotatedClass(TestingCategory.class);
-
+		configuration.addAnnotatedClass(Group.class);
+		configuration.addAnnotatedClass(User.class);
 		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties()).build();
 

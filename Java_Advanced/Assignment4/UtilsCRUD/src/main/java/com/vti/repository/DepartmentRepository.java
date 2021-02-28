@@ -10,6 +10,7 @@ import com.vti.utils.HibernateUtils;
 
 public class DepartmentRepository {
 
+
 	private HibernateUtils hibernateUtils;
 
 	public DepartmentRepository() {

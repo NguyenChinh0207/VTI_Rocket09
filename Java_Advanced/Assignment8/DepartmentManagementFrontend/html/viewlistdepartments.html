@@ -1,12 +1,24 @@
 <div class="container">
     <div class="search-container">
-        <div class="d-flex justify-content-center"style="width:500px;margin:auto;">
+        <div class="d-flex justify-content-center"
+            style="width:500px;margin:auto;">
             <input id="inputSearch" style="width:50%" type="text"
                 placeholder="Search.." name="search">
             <button class="search" type="submit" onclick="search()"><i class="fa
                     fa-search"></i></button>
-            <button onclick="sortByID()">sort by id</button>
+
         </div>
+    </div>
+    <div style="display: flex;">
+        <span style="margin-right:20px">Filter</span>
+        <input style="width:10%" class="form-control" id="inputMinNumber"
+            type="number" placeholder="minNumber...">
+        <span style="margin:0 20px"> - </span>
+        <input style="width:10%" class="form-control" id="inputMaxNumber"
+            type="number" placeholder="MaxNumber...">
+        <button class="btn btn-info" style="margin-left:12px"
+            onclick="filter()"><span>Filter</span></button>
+
     </div>
     <div class="table-wrapper">
         <div class="table-title">
@@ -24,9 +36,40 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Totalmember</th>
+                    <th>
+                        <div style="display: flex;">
+                            <span>Id</span>
+                            <div style="display: flex;flex-direction: column;">
+                                <i class="fa fa-sort-up" onclick="sortUp('id')"></i>
+                                <i class="fa fa-sort-down"
+                                    onclick="sortDown('id')"></i>
+
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div style="display: flex;">
+                            <span>Name</span>
+                            <div style="display: flex;flex-direction: column;">
+                                <i class="fa fa-sort-up"
+                                    onclick="sortUp('name')"></i>
+                                <i class="fa fa-sort-down"
+                                    onclick="sortDown('name')"></i>
+
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div style="display: flex;">
+                            <span>Totalmember</span>
+                            <div style="display: flex;flex-direction: column;">
+                                <i class="fa fa-sort-up"
+                                    onclick="sortUp('totalMember')"></i>
+                                <i class="fa fa-sort-down"
+                                    onclick="sortDown('totalMember')"></i>
+                            </div>
+                        </div>
+                    </th>
                     <th>Actions</th>
                 </tr>
             </thead>

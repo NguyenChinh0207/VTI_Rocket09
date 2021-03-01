@@ -258,10 +258,18 @@ function search() {
 	);
 }
 function paging(item) {
+	var pNumber = 1;
+	var pSize = 5; //default pSize ban đâu khi load thì sửa dèault bên backend
+	if (item == 0 || item == null) {
+		pNumber = 1;
+	} else {
+		pNumber = item;
+	}
 	$.get(
 		"http://localhost:8080/api/v1/departments?pageNumber=" +
-			item +
-			"&pageSize=5",
+			pNumber +
+			"&pageSize=" +
+			pSize,
 		function (data, status) {
 			// reset list departments
 
@@ -282,21 +290,97 @@ function paging(item) {
 	);
 }
 function login() {
-	var username = $("username").val();
-
+	var username = $("#username").val();
+	var password = $("#password").val();
+	console.log(username);
 	$.get(
-		"http://localhost:8080/api/v1/users/" + username,
+		"http://localhost:8080/api/v1/users?username=" + username,
 		function (data, status) {
-			alert("Login success");
-			if (check == false) {
+			if (data.password == password) {
+				alert("Login success");
+			} else {
 				alert("Login failed, name or pass is not correct");
 			}
-
 			if (status == "error") {
 				// TODO
 				alert("Error when loading data");
 				return;
 			}
+		}
+	);
+}
+function filter() {
+	var inputMin = $("#inputMinNumber").val();
+	var inputMax = $("#inputMaxNumber").val();
+	console.log(inputMax);
+	$.get(
+		"http://localhost:8080/api/v1/departments?minMember=" +
+			inputMin +
+			"&maxMember=" +
+			inputMax,
+		function (data, status) {
+			$("tbody").empty();
+			departments = [];
+
+			// error
+			if (status == "error") {
+				// TODO
+				alert("Error when loading data");
+				return;
+			}
+
+			// success
+			parseData(data);
+			filldepartmentToTable();
+		}
+	);
+}
+
+
+//sort
+function sortUp(field){
+	console.log(field)
+	$.get(
+		"http://localhost:8080/api/v1/departments?sortField=" +
+			field +
+			"&sortType=ASC",
+		function (data, status) {
+			$("tbody").empty();
+			departments = [];
+
+			// error
+			if (status == "error") {
+				// TODO
+				alert("Error when loading data");
+				return;
+			}
+
+			// success
+			parseData(data);
+			filldepartmentToTable();
+		}
+	);
+}
+function sortDown(field){
+	console.log(field)
+	$.get(
+		"http://localhost:8080/api/v1/departments?sortField=" +
+			field +
+			"&sortType=DESC",
+		function (data, status) {
+			$("tbody").empty();
+			departments = [];
+
+			// error
+			if (status == "error") {
+				// TODO
+				alert("Error when loading data");
+				return;
+			}
+
+			// success
+			parseData(data);
+			filldepartmentToTable();
 		}
 	);
 }

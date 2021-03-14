@@ -1,11 +1,16 @@
 $(function () {
 	//$(".header").load("header.html");
-
 	//ktra login, nếu có thì load home.html, ko thì load login.html
 	$(".main").load("login.html");
 	$(".footer").load("footer.html");
+	localStorage.getItem("userLogin");
+	console.log(localStorage.getItem("userLogin"))
 });
-
+function clickNavUserDetail(){
+	
+	var arr=JSON.parse(localStorage.getItem("userLogin"))
+	alert("bạn đang đăng nhập với user: "+arr.username)
+}
 function clickNavLogin() {
 	$(".main").load("login.html");
 }
@@ -265,39 +270,63 @@ function paging(item) {
 	} else {
 		pNumber = item;
 	}
-	$.get(
-		"http://localhost:8080/api/v1/departments?pageNumber=" +
+	$.ajax({
+		url:
+			"http://localhost:8080/api/v1/departments?pageNumber=" +
 			pNumber +
 			"&pageSize=" +
 			pSize,
-		function (data, status) {
-			// reset list departments
-
+		type: "GET",
+		success: function (result) {
+			// success
 			$("tbody").empty();
 			departments = [];
-
-			// error
-			if (status == "error") {
-				// TODO
-				alert("Error when loading data");
-				return;
-			}
-
-			// success
-			parseData(data);
+			parseData(result);
 			filldepartmentToTable();
-		}
-	);
+		},
+		error(jqXHR, textStatus, errorThrown) {
+			console.log(jqXHR);
+			console.log(textStatus);
+			console.log(errorThrown);
+		},
+	});
+	// $.get(
+	// 	"http://localhost:8080/api/v1/departments?pageNumber=" +
+	// 		pNumber +
+	// 		"&pageSize=" +
+	// 		pSize,
+	// 	function (data, status) {
+	// 		// reset list departments
+
+	// 		$("tbody").empty();
+	// 		departments = [];
+
+	// 		// error
+	// 		if (status == "error") {
+	// 			// TODO
+	// 			alert("Error when loading data");
+	// 			return;
+	// 		}
+
+	// 		// success
+	// 		parseData(data);
+	// 		filldepartmentToTable();
+	// 	}
+	// );
 }
+
+var userLogin;//luu phiên đăng nhập
 function login() {
 	var username = $("#username").val();
 	var password = $("#password").val();
-	console.log(username);
+	
 	$.get(
 		"http://localhost:8080/api/v1/users?username=" + username,
 		function (data, status) {
 			if (data.password == password) {
 				alert("Login success");
+				$(".main").load("home.html");
+				document.getElementById("login").innerHTML="Logout"
 			} else {
 				alert("Login failed, name or pass is not correct");
 			}
@@ -306,9 +335,12 @@ function login() {
 				alert("Error when loading data");
 				return;
 			}
+			localStorage.setItem("userLogin", JSON.stringify(data));
 		}
 	);
 }
+
+
 function filter() {
 	var inputMin = $("#inputMinNumber").val();
 	var inputMax = $("#inputMaxNumber").val();
@@ -336,10 +368,9 @@ function filter() {
 	);
 }
 
-
 //sort
-function sortUp(field){
-	console.log(field)
+function sortUp(field) {
+	console.log(field);
 	$.get(
 		"http://localhost:8080/api/v1/departments?sortField=" +
 			field +
@@ -361,8 +392,8 @@ function sortUp(field){
 		}
 	);
 }
-function sortDown(field){
-	console.log(field)
+function sortDown(field) {
+	console.log(field);
 	$.get(
 		"http://localhost:8080/api/v1/departments?sortField=" +
 			field +

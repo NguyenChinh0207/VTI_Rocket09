@@ -1,0 +1,189 @@
+<div class="page-breadcrumb bg-white">
+    <div class="row align-items-center">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Group Table</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <div class="d-md-flex">
+                <ol class="breadcrumb ms-auto">
+                    <li><a href="#" class="fw-normal text-success">Have a nice
+                            day <i class="fa fa-smile"></i></a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Container fluid  -->
+<!-- ============================================================== -->
+
+<div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <div style="display: flex; margin-left: 60%;">
+        <div style="display: flex; margin-right: 20px;">
+            <input type="text" placeholder="Search..." id="inputSearch"
+                class="form-control mt-0">
+            <button onclick="search()" style="border: none"><i class="fa fa-search" style="font-size:
+                    18px;margin-bottom: 16px;"></i></button>
+        </div>
+        <div style="display: flex;height: 40px;">
+            <button onclick="openConfirmDeleteSomeGroup()" style="border:none"><i
+                    class="material-icons" style="color:steelblue;">&#xE872;</i>
+                </button>
+            <button type="button" class="btn btn-info add-new"
+                data-toggle="modal" onclick="openAddModal()"
+                style="border-radius: 80px;"><i
+                    class="fa fa-plus"></i> Add New</button>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="white-box">
+
+                <div class="table-responsive">
+                    <table class="table text-nowrap table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="border-top-0">
+                                    <div>
+                                        <label for="">#</label>
+                                    </div>
+                                </th>
+                                <th class="border-top-0">
+                                    <div>
+                                        <label>STT</label>
+                                        <span style="float: right;display:
+                                            flex;flex-direction: column;">
+                                        </span>
+                                        <!-- <span>Id</span>
+                                    <span style="float: right;display:
+                                        flex;flex-direction: column;">
+                                        <i class="fa fa-sort-up" onclick="sortUp('id')"></i>
+                                        <i class="fa fa-sort-down"
+                                            onclick="sortDown('id')"></i>
+        
+                                    </span> -->
+                                    </div></th>
+                                <th class="border-top-0">
+                                    <div>
+                                        <span>Name</span>
+                                        <span style="float: right;display:
+                                            flex;flex-direction: column;">
+                                            <i class="fa fa-sort-up"
+                                                onclick="sortUp('name')"></i>
+                                            <i class="fa fa-sort-down"
+                                                onclick="sortDown('name')"></i>
+                                        </span>
+                                    </div>
+                                </th>
+                                <th class="border-top-0">
+                                    <div>
+                                        <span>Member</span>
+                                        <span style="float: right;display:
+                                            flex;flex-direction: column;">
+                                            <i class="fa fa-sort-up"
+                                                onclick="sortUp('member')"></i>
+                                            <i class="fa fa-sort-down"
+                                                onclick="sortDown('member')"></i>
+                                        </span>
+                                    </div>
+                                </th>
+                                <th class="border-top-0">
+                                    <div>
+                                        <span>CreateDate</span>
+                                        <span style="float: right;display:
+                                            flex;flex-direction: column;">
+                                            <i class="fa fa-sort-up"
+                                                onclick="sortUp('createDate')"></i>
+                                            <i class="fa fa-sort-down"
+                                                onclick="sortDown('createDate')"></i>
+                                        </span>
+                                    </div>
+                                </th>
+                                <th class="border-top-0">
+                                    <div>
+                                        <span>Creator</span>
+                                        <span style="float: right;display:
+                                            flex;flex-direction: column;">
+                                            <i class="fa fa-sort-up"
+                                                onclick="sortUp('creatorID')"></i>
+                                            <i class="fa fa-sort-down"
+                                                onclick="sortDown('creatorID')"></i>
+                                        </span>
+                                    </div>
+                                </th>
+                                <th class="border-top-0">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--  -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- header -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Add group</h5>
+                    <button type="button" class="close" data-dismiss="modal" >&times;</button>
+                </div>
+
+                <!-- body -->
+                <div class="modal-body">
+                    <div class="modal-container">
+
+                        <input type="hidden" id="id" name="id">
+
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Enter Name" name="name"
+                            id="name" required>
+                        <!-- <p class="errorName" style="display: none; color:red;font-size: 12px;"></p> -->
+                        <br>
+                        <label for="name"><b>Member</b></label>
+                        <input type="text" placeholder="Enter Member"
+                            name="Member" id="member" required>
+                        <br>
+                        <label for="name"><b>CreateDate</b></label>
+                        <input type="text" placeholder="Enter createDate"
+                            name="createDate" id="createDate" required>
+                        <br>
+                        <label for="name"><b>Creator</b></label>
+                        <input type="text"
+                            name="creatorID" id="creatorID" required disabled>
+                    </div>
+                </div>
+
+                <!-- footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary"
+                        data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary"
+                        onclick="save()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- success alert -->
+    <div class="alert alert-success" id="success-alert" style="display: none;">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <strong>Success! </strong>
+    </div>
+</div>
+<footer class="footer text-center"> 2021 © Create by <a
+        href="#">Nguyen Thi Chinh</a>
+</footer>
